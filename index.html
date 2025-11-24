@@ -72,6 +72,10 @@
             animation-delay: 0.5s;
         }
 
+        .game-card:nth-child(3) .card-icon {
+            animation-delay: 1s;
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
@@ -163,17 +167,24 @@
             <p class="card-description">استمع واكتب الكلمات بشكل صحيح. قوّ مهارات الإملاء لديك</p>
             <button class="card-button">ابدأ اللعبة →</button>
         </a>
+
+        <!-- Audio Dictation Card -->
+        <a href="dictation-audio.html" class="game-card">
+            <div class="card-icon">🔊</div>
+            <h2 class="card-title">الإملاء الصوتية</h2>
+            <p class="card-description">استمع للكلمات من الصوت واكتبها. تحسين مهارات الاستماع والكتابة</p>
+            <button class="card-button">ابدأ اللعبة →</button>
+        </a>
     </div>
 </div>
 
 <footer class="footer">
     <div class="footer-container">
-        <p>&copy; 2025 إعداد هديل حسن</p>
-       
+        <p>&copy; 2025 لعبات تعليمية. جميع الحقوق محفوظة.</p>
+        <p style="font-size: 12px; opacity: 0.8;">تم تطويرها لتحسين مهارات اللغة العربية</p>
     </div>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
