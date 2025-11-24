@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لعبات تعليمية</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .landing-page {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .games-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .cards-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .game-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #FFF9E6 100%);
+            border: 5px solid #FFD700;
+            border-radius: 30px;
+            padding: 40px 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .game-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 5px solid #FF1493;
+        }
+
+        .game-card:active {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .card-icon {
+            font-size: 80px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .game-card:nth-child(1) .card-icon {
+            animation-delay: 0s;
+        }
+
+        .game-card:nth-child(2) .card-icon {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .card-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .card-button {
+            background: linear-gradient(135deg, #FF6B9D, #FF1493);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s;
+            font-family: "Tajawal", "Comic Sans MS", Arial, sans-serif;
+        }
+
+        .card-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 9px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-button:active {
+            transform: translateY(0px);
+            box-shadow: 0 3px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .landing-header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .landing-header h1 {
+            font-size: 48px;
+            margin: 0;
+            text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .landing-header p {
+            font-size: 20px;
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+        }
+    </style>
+</head>
+<body class="landing-page">
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-image">
+            <h1>لعبات تعليمية</h1>
+        </div>
+        <p class="header-subtitle">تحسين مهارات اللغة العربية بطريقة ممتعة</p>
+    </div>
+</header>
+
+<div class="games-container">
+    <div class="cards-wrapper">
+        <!-- Poem Card -->
+        <a href="poem.html" class="game-card">
+            <div class="card-icon">📚</div>
+            <h2 class="card-title">ترتيب الأبيات</h2>
+            <p class="card-description">رتب الكلمات لتشكيل الجملة الصحيحة. لعبة تفاعلية بسحب وإفلات</p>
+            <button class="card-button">ابدأ اللعبة →</button>
+        </a>
+
+        <!-- Dictation Card -->
+        <a href="dectation.html" class="game-card">
+            <div class="card-icon">🎤</div>
+            <h2 class="card-title">الإملاء</h2>
+            <p class="card-description">استمع واكتب الكلمات بشكل صحيح. قوّ مهارات الإملاء لديك</p>
+            <button class="card-button">ابدأ اللعبة →</button>
+        </a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2025 لعبات تعليمية. جميع الحقوق محفوظة.</p>
+        <p style="font-size: 12px; opacity: 0.8;">تم تطويرها لتحسين مهارات اللغة العربية</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

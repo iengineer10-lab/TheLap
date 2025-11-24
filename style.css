@@ -1,0 +1,231 @@
+body {
+    font-family: "Tajawal", "Comic Sans MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #FFE66D 0%, #95E1D3 50%, #F38181 100%);
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.header {
+    background: linear-gradient(135deg, #FF6B9D 0%, #FFA502 50%, #F0E68C 100%);
+    color: white;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-bottom: 5px dashed #FF1493;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.2));
+}
+
+.logo-image {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 3px 3px 0px #FF1493, 6px 6px 0px #00CED1;
+}
+
+.header-subtitle {
+    margin: 12px 0 0 0;
+    font-size: 18px;
+    opacity: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFF9E6 100%);
+    padding: 30px;
+    border-radius: 30px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    flex: 1;
+    border: 5px solid #FFD700;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    direction: rtl;
+    text-align: right;
+    border: 4px solid #FF6B9D;
+    border-radius: 20px;
+    background: #FFFACD;
+    font-family: "Tajawal", "Comic Sans MS", Arial, sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+textarea:focus {
+    outline: none;
+    border: 4px solid #FF1493;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+}
+
+button {
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    font-family: "Tajawal", "Comic Sans MS", Arial, sans-serif;
+}
+
+button:hover { 
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+button:first-of-type {
+    background: linear-gradient(135deg, #FF6B9D, #FF1493);
+}
+
+#resetBtn {
+    background: linear-gradient(135deg, #FF7675, #FF4757) !important;
+}
+
+#checkBtn {
+    background: linear-gradient(135deg, #26DE81, #20C997) !important;
+}
+
+.footer {
+    background: linear-gradient(135deg, #FF6B9D 0%, #FFA502 50%, #F0E68C 100%);
+    color: white;
+    padding: 0;
+    margin-top: auto;
+    text-align: center;
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.15);
+    border-top: 5px dashed #FF1493;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-container p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#nextBtn { display:none; }
+
+.words-box {
+    margin-top: 20px;
+    min-height: 100px;
+    padding: 20px;
+    background: linear-gradient(135deg, #E0F7FA, #B2DFDB);
+    border-radius: 25px;
+    border: 4px dashed #00CED1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.word {
+    background: linear-gradient(135deg, #FFB6C1, #FFC0CB);
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: grab;
+    user-select: none;
+    position: relative;
+    font-weight: bold;
+    color: #FFFFFF;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    border: 2px solid #FF1493;
+}
+
+.word:hover {
+    transform: scale(1.05) rotateZ(2deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.word.correct { 
+    background: linear-gradient(135deg, #26DE81, #20C997);
+    border: 2px solid #00AA44;
+    box-shadow: 0 6px 15px rgba(38, 222, 129, 0.4);
+}
+
+.word.wrong { 
+    background: linear-gradient(135deg, #FF7675, #FF4757);
+    border: 2px solid #EE5A52;
+    box-shadow: 0 6px 15px rgba(255, 118, 117, 0.4);
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.drop-indicator {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: #FF1493;
+    border-radius: 2px;
+    pointer-events: none;
+    box-shadow: 0 0 8px #FF1493;
+}
+
+.drop-indicator.before {
+    right: -10px;
+}
+
+.drop-indicator.after {
+    left: -10px;
+}

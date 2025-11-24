@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ترتيب الأبيات - سحب وإفلات</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-image">
+            <h1>ترتيب الكلمات</h1>
+        </div>
+        <p class="header-subtitle">لعبة تعليمية لترتيب الجمل</p>
+    </div>
+</header>
+<div class="container">
+    <a href="index.html" style="display: inline-block; margin-bottom: 15px; padding: 10px 20px; background: #667eea; color: white; border-radius: 15px; text-decoration: none; font-weight: bold;">← العودة للقائمة الرئيسية</a>
+
+    <div id="correctSentencesDisplay" style="display:none; background: #e8f8f5; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-right: 4px solid #27ae60;">
+        <p style="color: #666; font-size: 14px; margin: 0 0 10px 0;"><strong>الجمل الصحيحة:</strong></p>
+        <div id="correctSentencesList" style="line-height: 1.8; font-size: 16px; color: #1a5f3e;"></div>
+    </div>
+
+    <textarea id="inputSentence" placeholder="أدخل الجملة هنا"></textarea>
+
+    <div style="display: flex; gap: 10px;">
+        <button onclick="generateGame()">تجهيز الكلمات</button>
+        <button id="resetBtn" onclick="resetGame()" style="display:none; background:#e74c3c;">
+            إعادة تعيين
+        </button>
+    </div>
+
+    <button id="checkBtn" onclick="checkAnswer()" style="display:none; background:#27ae60;">
+        تحقق من الإجابة
+    </button>
+
+    <div id="wordsContainer" class="words-box"></div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; عمل الطالبة هديل حسن   </p>
+        <p style="font-size: 12px; opacity: 0.8;">تم تطويرها لتحسين مهارات اللغة العربية</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
